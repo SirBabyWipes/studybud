@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cool Rooms</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Cool Rooms</h1>
+
+    <div id ="rooms-container"></div>
+</body>
+
+<script>
+    let getRooms = () => {
+        let response = fetch('http://127.0.0.1:8000/api/rooms/')
+        let rooms = response.json()
+        console.log('rooms:', rooms)
+    }
+
+    getRooms()
+</script>
+</html>
